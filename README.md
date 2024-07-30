@@ -54,9 +54,9 @@ http://localhost:8080
 <details>
 
 <summary></summary>
-**Conclusão/Curiosidades**
-    Projeto foi feito em Vue.js devido à empresa já utilizar a ferramenta. 
-    Foram necessários 1,5 dias apenas para configurar o ambiente, noites mal dormidas, muita pesquisa e ajuda de algumas plataformas mais inteligentes. 
+<strong>Conclusão/Curiosidades:</strong>
+<p>Projeto foi feito em Vue.js devido à empresa já utilizar a ferramenta.</p>
+<p>Foram necessários 1,5 dias apenas para configurar o ambiente, noites mal dormidas, muita pesquisa e ajuda de algumas plataformas mais inteligentes e muitos cabelos perdidos devido os conflitos gerados ao enviar o projeto ao repositório remoto.</p>
 
 <div align="right"><a href="https://github.com/DWan-Dall">DWD💜 </a></div>
 
