@@ -1,26 +1,27 @@
 <template>
-  <div id="app">
+  <div>
     <Sidebar />
     <div class="main-content">
-      <router-view></router-view>
+      <ItemForm />
     </div>
   </div>
 </template>
 
 <script>
 import Sidebar from '@/components/Sidebar.vue';
+import ItemForm from '@/components/ItemForm.vue';
 
 export default {
-  name: 'App',
   components: {
-    Sidebar
+    Sidebar,
+    ItemForm
   }
 };
 </script>
 
 <style>
 .main-content {
-  margin-left: 200px; 
+  margin-left: 200px;
   padding: 20px;
 }
 </style>
