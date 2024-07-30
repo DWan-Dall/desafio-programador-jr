@@ -15,9 +15,9 @@
                     id="name"
                     class="form-control"
                     v-model="item.name"
-                    required
                     maxlength="50"
                     @input="validateName"
+                    required
                   />
                   <div v-if="errors.name" class="text-danger">{{ errors.name }}</div>
                 </div>
@@ -49,15 +49,21 @@
                   />
                   <div v-if="errors.quantity" class="text-danger">{{ errors.quantity }}</div>
                 </div>
+
+                <div class="mb-3">
+                    <span class="input-group-addon unit-addon">{{ unitAddon }}</span>
+                  </div>
   
                 <div class="mb-3">
                   <label for="price" class="form-label">Preço:</label>
                   <input
-                    type="text"
+                    type="number"
+                    step="0.01"
                     id="price"
                     class="form-control"
                     v-model="item.price"
                     @input="validatePrice"
+                    required
                   />
                   <div v-if="errors.price" class="text-danger">{{ errors.price }}</div>
                 </div>
@@ -114,7 +120,7 @@
       return {
         item: {
           name: '',
-          unit: '',
+          unit: 'litro',
           quantity: null,
           price: '',
           perishable: false,
@@ -137,6 +143,11 @@
           return '\\d+\\.?\\d{0,3}';
         }
         return '\\d+';
+      },
+      unitAddon() {
+        if (this.item.unit ==='litro') return 'LT';
+        if (this.item.unit ==='quilograma') return 'KG';
+        return 'UN';
       }
     },
     methods: {
@@ -217,6 +228,13 @@
   
   .me-2 {
     margin-right: 0.5rem;
+  }
+
+  .unit-addon {
+    background-color: #007bff;
+    color: white;
+    padding: 0.27rem 0.75rem;
+    border-radius: 0.25rem;
   }
   </style>
   

@@ -4,6 +4,10 @@ import ItemList from '@/components/ItemList.vue';
 
 const routes = [
   {
+    path: '/',
+    redirect: '/form' 
+  },
+  {
     path: '/form',
     name: 'form',
     component: ItemForm
